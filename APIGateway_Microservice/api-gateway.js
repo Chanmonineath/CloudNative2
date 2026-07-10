@@ -45,7 +45,7 @@ app.use("/student", authToken, authRole("student"), (req, res) => {
 //REDIRECT TO THE TEACHER MICROSERVICE
 app.use("/teacher", authToken, authRole("teacher"), (req, res) => {
   console.log("INSIDE API GATEWAY TEACHER ROUTE");
-  proxy.web(req, res, { target: "http:3.239.12.59:5001" });
+  proxy.web(req, res, { target: "http://3.239.12.59:5001" });
 });
 
 //REDIRECT TO THE LOGIN(Authentication) MICROSERVICE
